@@ -92,13 +92,10 @@ export default function Home() {
         )}
       >
         <div className="d-flex justify-content-between">
-          <Image
+          <img
             src="/assets/images/logo.svg"
             className={style["header__logo"]}
-            width={172}
-            height={50}
             alt="Site Logo"
-            priority
           />
           <FontAwesomeIcon
             className={style["header__hamburger"]}
@@ -139,15 +136,10 @@ export default function Home() {
             "z-index-2 d-flex flex-column align-items-center justify-content-center"
           )}
         >
-          <Image
+          <img
             src="/assets/images/illustration-intro.png"
             alt="Intro Image"
-            width={600}
-            height={450}
             className="image"
-            priority
-            blurDataURL="data:..."
-            placeholder="blur"
           />
           <h1 className="text-center w-60 mt-5">
             All your files in one secure location, accessible anywhere.
@@ -194,11 +186,9 @@ export default function Home() {
           <section className={style.container}>
             <div className="row gap-5 gap-lg-0">
               <div className="col-lg-6 d-flex justify-content-center ">
-                <Image
+                <img
                   src="/assets/images/illustration-stay-productive.png"
                   alt="Stay Productive"
-                  width={600}
-                  height={450}
                   className="image"
                 />
               </div>
