@@ -38,9 +38,11 @@
 
   &__nav {
     animation: fade 1s linear;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     @media (max-width: 300px) {
       &--not-active {
         animation: fade-out 0.5s ease-in-out forwards;
@@ -54,8 +56,11 @@
 
   &__ul {
     display: flex;
+
     font-family: "Raleway", sans-serif;
+
     gap: 50px;
+
     margin-bottom: 0px;
 
     @media (max-width: 500px) {
@@ -65,6 +70,7 @@
 
   &__hamburger {
     cursor: pointer;
+
     @media (min-width: 300px) {
       & {
         display: none;
