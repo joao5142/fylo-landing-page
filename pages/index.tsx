@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import style from "@styles/home.module.scss";
 
 import classNames from "classnames";
@@ -96,7 +96,7 @@ export default function Home() {
             src="/assets/images/logo.svg"
             className={style["header__logo"]}
             width={172}
-            height={30}
+            height={50}
             alt="Site Logo"
             priority
           />
@@ -143,7 +143,7 @@ export default function Home() {
             src="/assets/images/illustration-intro.png"
             alt="Intro Image"
             width={600}
-            height={600}
+            height={450}
             className="image"
             priority
             blurDataURL="data:..."
@@ -197,10 +197,9 @@ export default function Home() {
                 <Image
                   src="/assets/images/illustration-stay-productive.png"
                   alt="Stay Productive"
-                  width={700}
-                  height={700}
+                  width={600}
+                  height={450}
                   className="image"
-                  priority
                 />
               </div>
               <div className="col-lg-6 d-flex align-items-center ">
@@ -282,7 +281,7 @@ export default function Home() {
               src="/assets/images/logo.svg"
               className={style["header__logo"]}
               width={172}
-              height={30}
+              height={50}
               alt="Site Logo"
             />
           </div>
