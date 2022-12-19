@@ -1,0 +1,29 @@
+@use "@styles/variables" as variables;
+
+.card {
+  padding: 40px 20px 30px 20px;
+  background-color: variables.$dark-50;
+
+  p,
+  h1 {
+    margin: 0px;
+  }
+  &__text {
+    font-size: 0.9rem;
+  }
+
+  &__author-image {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+  }
+
+  &__author-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  &__author-position-held {
+    font-size: 0.6rem;
+    opacity: 0.6;
+  }
+}

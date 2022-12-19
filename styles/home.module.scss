@@ -1,0 +1,242 @@
+@use "./variables" as variables;
+@use "./mixins" as mixins;
+
+.container {
+  padding: 0px 100px;
+
+  @include mixins.responsivo(xs) {
+    & {
+      padding: 0px 20px;
+    }
+  }
+}
+
+.header {
+  @media (max-width: 300px) {
+    & {
+      flex-direction: column;
+    }
+    & ul {
+      padding: 0px;
+      margin-top: 20px;
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    min-width: 142px;
+    max-height: 52px;
+
+    @media (max-width: 500px) {
+      & {
+        min-width: 72px;
+        max-width: 72px;
+        max-height: 22px;
+      }
+    }
+  }
+
+  &__nav {
+    animation: fade 1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media (max-width: 300px) {
+      &--not-active {
+        animation: fade-out 0.5s ease-in-out forwards;
+      }
+      &--active {
+        display: flex;
+        animation: fade 1s linear forwards;
+      }
+    }
+  }
+
+  &__ul {
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    gap: 50px;
+    margin-bottom: 0px;
+
+    @media (max-width: 500px) {
+      gap: 10px;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    @media (min-width: 300px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.main {
+  &__principal-content {
+    margin-top: 300px;
+    padding: 300px 0px;
+    background: linear-gradient(variables.$dark-200, variables.$dark-50);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -800px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      height: 800px;
+
+      background-image: url("/assets/images/bg-curvy-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 120%;
+
+      @include mixins.responsivo(xs) {
+        & {
+          background-image: url("/assets/images/bg-curvy-mobile.svg");
+        }
+      }
+    }
+  }
+  &__testimonials {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: 40px;
+      width: 80px;
+      height: 40px;
+      background: url("/assets/images/bg-quotes.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.link {
+  color: variables.$blue-50;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+
+  position: relative;
+
+  &:hover::before {
+    background-color: variables.$blue-300;
+  }
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: -20px;
+    top: 52%;
+    transform: translateY(-40%);
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: variables.$blue-50;
+  }
+}
+
+.footer {
+  padding: 300px 0px 200px 0px;
+  background-color: variables.$dark-300;
+
+  position: relative;
+  &__form-content {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 50px;
+    max-width: 50%;
+
+    border-radius: 10px;
+
+    background-color: variables.$dark-100;
+
+    @include mixins.responsivo(xs) {
+      & {
+        max-width: 100%;
+      }
+    }
+    @include mixins.responsivo(sm) {
+      & {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      padding: 40px 15px;
+    }
+  }
+
+  &__input {
+    display: inline-block;
+    padding: 15px 50px;
+    border-radius: 50px;
+    max-width: 100%;
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+    @media (max-width: 400px) {
+      padding: 10px 15px;
+    }
+  }
+
+  &__location-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__items {
+    @media (min-width: 1000px) and (max-width: 1200px) {
+      & {
+        margin-top: 70px;
+      }
+    }
+    @media (max-width: 1000px) {
+      & {
+        margin-top: 200px;
+      }
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+}

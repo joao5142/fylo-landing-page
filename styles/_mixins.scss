@@ -1,0 +1,23 @@
+@mixin responsivo($device: "md") {
+  @if ($device== "xs") {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if ($device== "sm") {
+    @media (max-width: 960px) {
+      @content;
+    }
+  } @else if ($device== "md") {
+    @media (max-width: 1264px) {
+      @content;
+    }
+  } @else if ($device== "lg") {
+    @media (max-width: 1920px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}

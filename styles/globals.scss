@@ -1,0 +1,81 @@
+@use "./variables.scss" as variables;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import "./utils";
+
+/*##RESET*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover,
+  &:hover::before,
+  &:hover::after {
+    color: variables.$blue-300;
+  }
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  border: 0;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  border: 0;
+  outline: none;
+}
+
+// To overwrite the default background
+body {
+  background-color: variables.$dark-50 !important;
+  padding-top: 100px;
+  color: white;
+
+  @media (max-width: 500px) {
+    padding-top: 30px;
+  }
+}
+
+section {
+  margin-top: 150px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.margin-content {
+  margin-top: -400px;
+}
+.word-break {
+  word-break: break-all;
+}

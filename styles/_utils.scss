@@ -1,0 +1,32 @@
+@use "./mixins" as mixins;
+
+.image {
+  max-width: 600px;
+}
+
+$sizes: 100 90 80 70 60 50 40 30 20 10;
+
+@each $size in $sizes {
+  .mt-#{$size} {
+    margin-top: #{$size}#{"px"} !important;
+  }
+  .w-#{$size} {
+    max-width: #{$size}#{"%"} !important;
+    @include mixins.responsivo("sm") {
+      & {
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+$sizes: 1 2 3 4 5;
+@each $size in $sizes {
+  .font-#{$size} {
+    font-size: #{(1 + ($size * 0.2))}#{"rem"};
+  }
+  .z-index-#{$size} {
+    position: relative;
+    z-index: $size;
+  }
+}

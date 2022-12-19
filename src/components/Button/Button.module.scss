@@ -1,0 +1,27 @@
+@use "@styles/variables.scss" as variables;
+.button {
+  padding: 13px 30px;
+
+  background: linear-gradient(to left, variables.$blue-50, variables.$blue-300);
+
+  font-weight: 700;
+  color: white;
+
+  border-radius: 40px;
+
+  transition: 0.5s ease-in-out;
+
+  &--large {
+    padding: 15px 80px;
+    font-size: 1.05rem;
+  }
+
+  &:hover {
+    background: variables.$blue-50;
+  }
+
+  
+  @media (max-width: 400px) {
+    padding: 10px 15px;
+  }
+}
