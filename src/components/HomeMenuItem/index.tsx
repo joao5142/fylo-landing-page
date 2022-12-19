@@ -16,8 +16,6 @@ export default function HomeMenuItem({ title, description, image }: Props) {
         alt="Menu Item"
         width={100}
         height={100}
-        layout="responsive"
-        objectFit="cover"
         className={style["image"]}
       />
       <h4 className="mt-4 text-center">{title}</h4>

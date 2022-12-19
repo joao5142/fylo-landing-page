@@ -24,9 +24,8 @@ export default function Testimonial({
           alt="Testimonial image"
           width={100}
           height={100}
-          layout="responsive"
-          objectFit="cover"
           className={classNames(style["card__author-image"], "me-2")}
+          priority
         />
         <div>
           <h1 className={classNames(style["card__author-name"], "mb-1")}>

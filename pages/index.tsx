@@ -98,6 +98,7 @@ export default function Home() {
             width={172}
             height={30}
             alt="Site Logo"
+            priority
           />
           <FontAwesomeIcon
             className={style["header__hamburger"]}
@@ -140,12 +141,13 @@ export default function Home() {
         >
           <Image
             src="/assets/images/illustration-intro.png"
-            alt="Grow Together"
-            width={100}
-            height={100}
-            layout="responsive"
-            objectFit="cover"
+            alt="Intro Image"
+            width={600}
+            height={600}
             className="image"
+            priority
+            blurDataURL="data:..."
+            placeholder="blur"
           />
           <h1 className="text-center w-60 mt-5">
             All your files in one secure location, accessible anywhere.
@@ -194,12 +196,11 @@ export default function Home() {
               <div className="col-lg-6 d-flex justify-content-center ">
                 <Image
                   src="/assets/images/illustration-stay-productive.png"
-                  alt="Grow Together"
-                  width={100}
-                  height={100}
-                  layout="responsive"
-                  objectFit="cover"
+                  alt="Stay Productive"
+                  width={700}
+                  height={700}
                   className="image"
+                  priority
                 />
               </div>
               <div className="col-lg-6 d-flex align-items-center ">
