@@ -276,23 +276,24 @@ export default function Home() {
             />
           </div>
           <div className="row gap-5 gap-lg-0">
-            <div className="col-lg-4">
-              <div className="d-flex align-items-center">
-                <Image
-                  src="/assets/images/icon-location.svg"
-                  width={30}
-                  height={30}
-                  alt="Site Logo"
-                  className="footer__location-icon"
-                />
-                <p className="ms-3 mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-              </div>
+            <div className="col-lg-4 d-flex align-items-center">
+              <Image
+                src="/assets/images/icon-location.svg"
+                width={30}
+                height={30}
+                alt="Location Icon"
+                className={classNames(
+                  style["footer__location-icon"],
+                  "d-none d-lg-block"
+                )}
+              />
+              <p className="ms-md-3 mb-0 flex-grow-1 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </p>
             </div>
 
-            <div className="col-lg-2 d-flex  flex-column ">
+            <div className="col-lg-2 d-flex  flex-column">
               <div className="d-flex gap-3 align-items-center">
                 <Image
                   src="/assets/images/icon-phone.svg"

@@ -219,8 +219,14 @@
   }
 
   &__location-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   &__items {
